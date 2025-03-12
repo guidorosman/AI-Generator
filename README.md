@@ -14,7 +14,7 @@ Before installing and running this project, ensure that your system meets the fo
 - **Composer**: Version **2.6** or higher  
 - **Node.js**: Version **18+**
 
-### Instalation on localhost
+## Instalation on localhost
 
 1. Clone repository:
 

@@ -6,15 +6,16 @@ After data is submitted AI will generate a CV and Cover Letter considering the u
 
 The user will be able to preview CV and Cover Letter,  download them in a pdf file or regenerate again with new AI texts.
 
-## Requirements
+## Live Demo
+https://ai-generator-production.up.railway.app/
+
+## Instalation on localhost
 
 Before installing and running this project, ensure that your system meets the following requirements:
 
 - **PHP**: Version **8.2** or higher  
 - **Composer**: Version **2.6** or higher  
 - **Node.js**: Version **18+**
-
-## Instalation on localhost
 
 1. Clone repository:
 

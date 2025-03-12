@@ -61,7 +61,7 @@ class GeneratorController extends Controller
             'educationTitles.*.required' => 'The education title field is required.',
             'institutions.*.required' => 'The institution field is required.',
         ]);
-
+        
         session(['cvData' => $request->all()]);
 
         $this->generateCV();
@@ -76,7 +76,10 @@ class GeneratorController extends Controller
 
         if ($data) {
 
-            $skillsText = $this->getSkills($data['skills']);
+            $skillsText = "";
+            if (!empty($data['skills'])){
+                $skillsText = $this->getSkills($data['skills']);
+            }
         
             // Generate About Me        
             $jobApplicationTitle = $data['jobApplicationTitle'];
@@ -115,7 +118,10 @@ class GeneratorController extends Controller
 
         if ($data) {
 
-            $skillsText = $this->getSkills($data['skills']);
+            $skillsText = "";
+            if (!empty($data['skills'])){
+                $skillsText = $this->getSkills($data['skills']);
+            }
 
             // Generate Cover Letter       
             $jobApplicationTitle = $data['jobApplicationTitle'];
@@ -205,12 +211,9 @@ class GeneratorController extends Controller
 
     public function getSkills($skillsArray)
     {
-        $skillsText = "";
-        if (!empty($skillsArray)) {
-            $skills = implode(', ', $skillsArray);
-            $skillsText = "and consider my skills if are relevant for the job position: $skills";
-        }
-
+        $skills = implode(', ', $skillsArray);
+        $skillsText = "and consider my skills if are relevant for the job position: $skills";
+      
         return $skillsText;
     }
 }

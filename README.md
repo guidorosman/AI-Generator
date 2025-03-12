@@ -19,7 +19,7 @@ Before installing and running this project, ensure that your system meets the fo
 1. Clone repository:
 
     ```bash
-    git clone https://github.com/usuario/nombre-del-repositorio.git
+    git clone [https://github.com/usuario/nombre-del-repositorio.git](https://github.com/guidorosman/AI-Generator.git)
     ```
 2. Enter directory:
 

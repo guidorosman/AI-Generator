@@ -1,6 +1,6 @@
 # AI Generator
 
-This is a CV and Cover Letter generator with AI project. It consists on a multi step form to add information about personal details, work experiences, educations, skills, languages and hobbies. On the last step you have to enter a job position and task descriptions for the position you want to apply.
+This is a CV and Cover Letter generator with AI project developed with Laravel. It consists on a multi step form to add information about personal details, work experiences, educations, skills, languages and hobbies. On the last step you have to enter a job position and task descriptions for the position you want to apply.
 
 After data is submitted AI will generate a CV and Cover Letter considering the user work experiences and relevant skill in relation with the applying position. 
 

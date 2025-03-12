@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.button:hover {
+    background-color: #00796b;
+}
+.option{
+    margin-right: 15px;
+}
+#success-message{
+    color: green; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    font-weight:bold;
+}
+#loading-message{
+    display: none; 
+    font-weight: bold; 
+    color: blue; 
+    margin-top: 20px;
+}
+.link-goto{
+    display: inline-block;
+    margin-top: 15px;
+}

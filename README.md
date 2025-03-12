@@ -42,5 +42,5 @@ Before installing and running this project, ensure that your system meets the fo
     ```bash
     php artisan serve
     ```
-### Author
+## Author
 Guido Ezequiel Rosman - 2025

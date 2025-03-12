@@ -42,7 +42,7 @@
                placeholder="Fullname" 
                name="fullname" 
                value="{{ old('fullname') }}" 
-               class="form-control @error('fullname') is-invalid @enderror">
+               class="form-control @error('fullname') is-invalid @enderror" required>
         @error('fullname')
             <div class="text-danger">{{ $message }}</div>
         @enderror
@@ -52,7 +52,7 @@
                placeholder="Email Address" 
                name="email" 
                value="{{ old('email') }}" 
-               class="form-control @error('email') is-invalid @enderror">
+               class="form-control @error('email') is-invalid @enderror" required>
         @error('email')
             <div class="text-danger">{{ $message }}</div>
         @enderror
@@ -62,7 +62,7 @@
                placeholder="Phone Number" 
                name="phone" 
                value="{{ old('phone') }}" 
-               class="form-control @error('phone') is-invalid @enderror">
+               class="form-control @error('phone') is-invalid @enderror" required>
         @error('phone')
             <div class="text-danger">{{ $message }}</div>
         @enderror
@@ -72,7 +72,7 @@
                placeholder="Location" 
                name="location" 
                value="{{ old('location') }}" 
-               class="form-control @error('location') is-invalid @enderror">
+               class="form-control @error('location') is-invalid @enderror" required>
         @error('location')
             <div class="text-danger">{{ $message }}</div>
         @enderror
@@ -90,20 +90,20 @@
                 <div class="work-experience-entry mb-3 p-3 border rounded">
                     <!-- Job Title -->
                     <input type="text" class="form-control mb-2 @error('jobTitles.' . $index) is-invalid @enderror" 
-                           placeholder="Job Title" name="jobTitles[]" value="{{ $job }}">
+                           placeholder="Job Title" name="jobTitles[]" value="{{ $job }}" required>
                     @error('jobTitles.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                     
                     <!-- Company Name -->
                     <input type="text" class="form-control mb-2 @error('companyNames.' . $index) is-invalid @enderror" 
-                           placeholder="Company Name" name="companyNames[]" value="{{ old('companyNames.' . $index) }}">
+                           placeholder="Company Name" name="companyNames[]" value="{{ old('companyNames.' . $index) }}" required>
                     @error('companyNames.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
 
                     <!-- Work Duration -->
-                    <select class="form-select mb-2 @error('workDurations.' . $index) is-invalid @enderror" name="workDurations[]">
+                    <select class="form-select mb-2 @error('workDurations.' . $index) is-invalid @enderror" name="workDurations[]" required>
                         <option value="" disabled selected>Select duration</option>
                         <option value="Less than 1 year" {{ old('workDurations.' . $index) == 'Less than 1 year' ? 'selected' : '' }}>Less than 1 year</option>
                         <option value="1 - 2 years" {{ old('workDurations.' . $index) == '1 - 2 years' ? 'selected' : '' }}>1 - 2 years</option>
@@ -117,7 +117,7 @@
                     <!-- Job Description -->
                     <div class="mb-3">
                         <textarea class="form-control no-resize @error('jobDescriptions.' . $index) is-invalid @enderror" 
-                                  placeholder="Job Description" name="jobDescriptions[]" rows="4">{{ old('jobDescriptions.' . $index) }}</textarea>
+                                  placeholder="Job Description" name="jobDescriptions[]" rows="4" required>{{ old('jobDescriptions.' . $index) }}</textarea>
                         @error('jobDescriptions.' . $index)
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -141,9 +141,9 @@
                     div.classList.add("work-experience-entry", "mb-3", "p-3", "border", "rounded");
 
                     div.innerHTML = `
-            <input type="text" class="form-control mb-2" placeholder="Job Title" name="jobTitles[]" value="{{ old('jobTitles[]') }}" >
-            <input type="text" class="form-control mb-2" placeholder="Company Name" name="companyNames[]" value="{{ old('companyNames[]') }}" >
-            <select class="form-select mb-2" name="workDurations[]" >
+            <input type="text" class="form-control mb-2" placeholder="Job Title" name="jobTitles[]" value="{{ old('jobTitles[]') }}" required>
+            <input type="text" class="form-control mb-2" placeholder="Company Name" name="companyNames[]" value="{{ old('companyNames[]') }}" required>
+            <select class="form-select mb-2" name="workDurations[]" required>
                 <option value="" disabled selected>Select duration</option>
                 <option value="Less than 1 year" {{ old('workDurations[]') == 'Less than 1 year' ? 'selected' : '' }}>Less than 1 year</option>
                 <option value="1 - 2 years" {{ old('workDurations[]') == '1 - 2 years' ? 'selected' : '' }}>1 - 2 years</option>
@@ -151,7 +151,7 @@
                 <option value="More than 5 years" {{ old('workDurations[]') == 'More than 5 years' ? 'selected' : '' }}>More than 5 years</option>
             </select>
             <div class="mb-3">
-                <textarea class="form-control no-resize" placeholder="Job Description" name="jobDescriptions[]" rows="4" >{{ old('jobDescriptions[]') }}</textarea>
+                <textarea class="form-control no-resize" placeholder="Job Description" name="jobDescriptions[]" rows="4" required>{{ old('jobDescriptions[]') }}</textarea>
             </div>
             <button type="button" class="btn btn-danger btn-sm" onclick="removeWorkExperience(this)">Remove</button>
         `;
@@ -174,14 +174,14 @@
                 <div class="education-entry mb-3 p-3 border rounded">
                     <!-- Education Title -->
                     <input type="text" class="form-control mb-2 @error('educationTitles.' . $index) is-invalid @enderror" 
-                           placeholder="Education Title" name="educationTitles[]" value="{{ $education }}">
+                           placeholder="Education Title" name="educationTitles[]" value="{{ $education }}" required>
                     @error('educationTitles.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
 
                     <!-- Institution -->
                     <input type="text" class="form-control mb-2 @error('institutions.' . $index) is-invalid @enderror" 
-                           placeholder="Institution" name="institutions[]" value="{{ old('institutions.' . $index) }}">
+                           placeholder="Institution" name="institutions[]" value="{{ old('institutions.' . $index) }}" required>
                     @error('institutions.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -205,8 +205,8 @@
         div.classList.add("education-entry", "mb-3", "p-3", "border", "rounded");
 
         div.innerHTML = `
-            <input type="text" class="form-control mb-2" placeholder="Education Title" name="educationTitles[]" value="{{ old('educationTitles[]') }}" >
-            <input type="text" class="form-control mb-2" placeholder="Institution" name="institutions[]" value="{{ old('institutions[]') }}" >
+            <input type="text" class="form-control mb-2" placeholder="Education Title" name="educationTitles[]" value="{{ old('educationTitles[]') }}" required>
+            <input type="text" class="form-control mb-2" placeholder="Institution" name="institutions[]" value="{{ old('institutions[]') }}" required>
             <button type="button" class="btn btn-danger btn-sm" onclick="removeEducation(this)">Remove</button>
         `;
 
@@ -226,7 +226,7 @@
                     @if (old('skills'))
                     @foreach (old('skills') as $index => $skill)
                     <div class="skill-entry mb-3 p-3 border rounded">
-                        <input type="text" class="form-control mb-2 @error('skills.' . $index) is-invalid @enderror" placeholder="Skill" name="skills[]" value="{{ $skill }}">
+                        <input type="text" class="form-control mb-2 @error('skills.' . $index) is-invalid @enderror" placeholder="Skill" name="skills[]" value="{{ $skill }}" required>
 
                         @error('skills.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -259,7 +259,7 @@
                     div.classList.add("skill-entry", "mb-3", "p-3", "border", "rounded");
 
                     div.innerHTML = `
-            <input type="text" class="form-control mb-2" placeholder="Skill" name="skills[]" >
+            <input type="text" class="form-control mb-2" placeholder="Skill" name="skills[]" required>
             <button type="button" class="btn btn-danger btn-sm" onclick="removeSkill(this)">Remove</button>
         `;
 
@@ -288,13 +288,13 @@
                 <div class="language-entry mb-3 p-3 border rounded">
                     <!-- Language Input -->
                     <input type="text" class="form-control mb-2 @error('languages.' . $index) is-invalid @enderror" 
-                           placeholder="Language" name="languages[]" value="{{ $language }}">
+                           placeholder="Language" name="languages[]" value="{{ $language }}" required>
                     @error('languages.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
 
                     <!-- Level Select -->
-                    <select class="form-select mb-2 @error('levels.' . $index) is-invalid @enderror" name="levels[]">
+                    <select class="form-select mb-2 @error('levels.' . $index) is-invalid @enderror" name="levels[]" required>
                         <option value="" disabled selected>Select Level</option>
                         <option value="Beginner" {{ old('levels')[$index] ?? '' == 'Beginner' ? 'selected' : '' }}>Beginner</option>
                         <option value="Intermediate" {{ old('levels')[$index] ?? '' == 'Intermediate' ? 'selected' : '' }}>Intermediate</option>
@@ -331,8 +331,8 @@
         div.classList.add("language-entry", "mb-3", "p-3", "border", "rounded");
 
         div.innerHTML = `
-            <input type="text" class="form-control mb-2" placeholder="Language" name="languages[]">
-            <select class="form-select mb-2" name="levels[]">
+            <input type="text" class="form-control mb-2" placeholder="Language" name="languages[]" required>
+            <select class="form-select mb-2" name="levels[]" required>
                 <option value="" disabled selected>Select Level</option>
                 <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
@@ -366,7 +366,7 @@
                     @if (old('hobbies'))
                     @foreach (old('hobbies') as $index => $hobby)
                     <div class="hobby-entry mb-3 p-3 border rounded">
-                        <input type="text" class="form-control mb-2 @error('hobbies.' . $index) is-invalid @enderror" placeholder="Hobby" name="hobbies[]" value="{{ $hobby }}">
+                        <input type="text" class="form-control mb-2 @error('hobbies.' . $index) is-invalid @enderror" placeholder="Hobby" name="hobbies[]" value="{{ $hobby }}" required>
 
                         @error('hobbies.' . $index)
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -401,7 +401,7 @@
                     div.classList.add("hobby-entry", "mb-3", "p-3", "border", "rounded");
 
                     div.innerHTML = `
-            <input type="text" class="form-control mb-2" placeholder="Hobby" name="hobbies[]" value="{{ old('hobbies[]') }}">
+            <input type="text" class="form-control mb-2" placeholder="Hobby" name="hobbies[]" value="{{ old('hobbies[]') }}" required>
             <button type="button" class="btn btn-danger btn-sm" onclick="removeHobby(this)">Remove</button>
         `;
 
@@ -436,7 +436,7 @@
                placeholder="Job Title" 
                name="jobApplicationTitle" 
                value="{{ old('jobApplicationTitle') }}" 
-               class="form-control @error('jobApplicationTitle') is-invalid @enderror">
+               class="form-control @error('jobApplicationTitle') is-invalid @enderror" required>
         @error('jobApplicationTitle')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -446,7 +446,7 @@
         <textarea class="form-control no-resize @error('jobApplicationDescription') is-invalid @enderror" 
                   placeholder="Job Application Description" 
                   name="jobApplicationDescription" 
-                  rows="4">{{ old('jobApplicationDescription') }}</textarea>
+                  rows="4" required>{{ old('jobApplicationDescription') }}</textarea>
         @error('jobApplicationDescription')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror

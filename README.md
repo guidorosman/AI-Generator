@@ -17,7 +17,7 @@ CV:
 - Work experience descriptions will be optimized to match with job applying position.
 
 Cover Letter:
-- 3 paragraph: introduction, body and closing considering thue user skills and job applying position.
+- 3 paragraph: introduction, body and closing considering tue user skills and job applying position.
 
 ## Live Demo
 https://ai-generator-production.up.railway.app/

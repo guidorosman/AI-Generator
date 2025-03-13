@@ -8,7 +8,9 @@ The user will be able to preview CV and Cover Letter, download in a pdf or regen
 
 ## Mistral AI
 
-For generate the AI texts the project connects to the Mistral AI API. Which text will be generated? 
+For generate the AI texts the project connects to the Mistral AI API. https://mistral.ai/ 
+
+Which text will be generated? 
 
 CV:
 - "About me" section considering the user skills and job applying position.

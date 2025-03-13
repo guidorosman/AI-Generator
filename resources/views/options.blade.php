@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Option</title>
+    <title>CV & CL Generator</title>
     <!-- Styles / Scripts -->
     @vite(['resources/scss/options.scss', 'resources/js/options.js'])
 </head>
